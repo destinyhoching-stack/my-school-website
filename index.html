@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Website</title>
+
+    <title>Foundations of the Restoration</title>
 
     <style>
         * {
@@ -18,6 +19,7 @@
             font-family: Arial, sans-serif;
             background: #f4f6f9;
             color: #222;
+            line-height: 1.7;
         }
 
         /* Website Header */
@@ -25,14 +27,19 @@
             background: #172554;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 35px 20px;
         }
 
         header h1 {
             margin-bottom: 10px;
+            line-height: 1.3;
         }
 
-        /* Horizontal Navigation Bar */
+        header p {
+            color: #dbeafe;
+        }
+
+        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: center;
@@ -46,39 +53,60 @@
         nav a {
             color: white;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 12px 20px;
             border-radius: 6px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
 
-        nav a:hover {
+        nav a:hover,
+        nav a:focus-visible {
             background: white;
             color: #2563eb;
         }
 
-        /* Page Sections */
+        /* Main Sections */
         section {
             min-height: 300px;
-            padding: 70px 20px;
-            text-align: center;
+            padding: 65px 20px;
             scroll-margin-top: 20px;
         }
 
         section h2 {
             font-size: 32px;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            color: #172554;
+            line-height: 1.3;
         }
 
         section p {
-            max-width: 650px;
+            max-width: 800px;
             margin: 0 auto 20px;
-            line-height: 1.7;
         }
 
         #home {
             background: linear-gradient(135deg, #dbeafe, #eff6ff);
-            padding: 100px 20px;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #home h2 {
+            font-size: 36px;
+        }
+
+        #home p {
+            margin-bottom: 25px;
+        }
+
+        /* Book of Mormon Image */
+        .book-image {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin: 25px auto 0;
+            border-radius: 8px;
         }
 
         #about {
@@ -93,20 +121,47 @@
             background: white;
         }
 
-        button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 14px 25px;
+        /* My Why List */
+        .why-list {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding-left: 28px;
+        }
+
+        .why-list li {
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        /* Keystone Points */
+        .keystone-point {
+            max-width: 800px;
+            margin: 0 auto 25px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-left: 5px solid #2563eb;
             border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
         }
 
-        button:hover {
-            background: #172554;
+        .keystone-point h3 {
+            color: #172554;
+            margin-bottom: 8px;
         }
 
+        .keystone-point p {
+            margin-bottom: 0;
+        }
+
+        /* Testimony */
+        .testimony {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            background: #eff6ff;
+            border-radius: 8px;
+        }
+
+        /* Footer */
         footer {
             background: #172554;
             color: white;
@@ -114,19 +169,39 @@
             padding: 22px;
         }
 
+        footer p {
+            margin: 0;
+        }
+
         /* Mobile Layout */
         @media (max-width: 500px) {
+            header h1 {
+                font-size: 25px;
+            }
+
             nav {
-                gap: 4px;
+                gap: 5px;
             }
 
             nav a {
-                padding: 12px 10px;
+                padding: 10px 12px;
                 font-size: 14px;
             }
 
+            section {
+                padding: 45px 18px;
+            }
+
             section h2 {
-                font-size: 26px;
+                font-size: 27px;
+            }
+
+            #home h2 {
+                font-size: 29px;
+            }
+
+            .keystone-point {
+                padding: 16px;
             }
         }
     </style>
@@ -135,88 +210,174 @@
 <body>
 
     <header>
-        <h1>Personal Learning Project - Foundations Of The Restoration</h1>
+        <h1>Personal Learning Project</h1>
+        <p>Foundations of the Restoration</p>
     </header>
 
-    <!-- All four navigation links across the top -->
+    <!-- Main Navigation -->
     <nav aria-label="Main navigation">
         <a href="#home">Home</a>
         <a href="#about">My Why</a>
-        <a href="#services">What is Keystone</a>
+        <a href="#services">What Is the Keystone?</a>
         <a href="#contact">Testimony</a>
     </nav>
 
     <main>
+
+        <!-- Home Section -->
         <section id="home">
-            <h2>The Book of Mormon - Keystone of our Religeon</h2>
+            <h2>The Book of Mormon: Keystone of Our Religion</h2>
+
             <p>
-                <img src="book-of-mormon.png">
-                
+                Discover why the Book of Mormon is central to our faith,
+                our testimony of Jesus Christ, and the Restoration.
             </p>
-            <!--<button onclick="showMessage()">Click Me</button>
-            <p id="message" aria-live="polite"></p>-->
+
+            <img
+                src="book-of-mormon.png"
+                alt="The Book of Mormon"
+                class="book-image"
+            >
         </section>
 
-
+        <!-- My Why Section -->
         <section id="about">
             <h2>My Why</h2>
-            <br>
-            <ol>
-                <li>I loved the Book of Mormon and saw how it touched others and changed their lives</li>
-                <br>
-                <li>I wanted a deeper understanding. </li>
-                <br>
-                <li>In my personal life, I saw the power the Book of Mormon had on my dad's conversion and bringing my mother back to the gospel</li> <br><br><br>
+
+            <ol class="why-list">
+                <li>
+                    I love the Book of Mormon and have seen how it has
+                    touched others and changed their lives.
+                </li>
+
+                <li>
+                    I want to gain a deeper understanding of the Book
+                    of Mormon and its teachings.
+                </li>
+
+                <li>
+                    In my personal life, I have seen the power the
+                    Book of Mormon had in my dad's conversion and in
+                    bringing my mother back to the gospel.
+                </li>
+            </ol>
+
             <p>
-                For my “why,” I have many reasons, and I could keep adding to the list, but my main reason is that I love this gospel, I love the Savior, and I love the prophets. As I learned more about the history of how the Book of Mormon became available to us, I felt a desire to gain a deeper understanding of it. The sacrifice, love, and dedication that went into bringing this book to the world remind me that Heavenly Father wanted us to have it. It testifies of Jesus Christ, and I believe Heavenly Father knew how much it would help me in my own life. I have already seen the blessings and power of the Book of Mormon in my life and in the lives of my family members. My “why” comes down to this: I love Heavenly Father and the Savior, and I want to keep growing closer to Them through the Book of Mormon.
+                For my "why," I have many reasons, and I could keep
+                adding to the list. My main reason is that I love this
+                gospel, I love the Savior, and I love the prophets.
+                As I learned more about the history of how the Book
+                of Mormon became available to us, I felt a desire to
+                gain a deeper understanding of it.
+            </p>
+
+            <p>
+                The sacrifice, love, and dedication that went into
+                bringing this book to the world remind me that
+                Heavenly Father wanted us to have it. It testifies
+                of Jesus Christ, and I believe Heavenly Father knew
+                how much it would help me in my own life.
+            </p>
+
+            <p>
+                I have already seen the blessings and power of the
+                Book of Mormon in my life and in the lives of my
+                family members. My "why" comes down to this: I love
+                Heavenly Father and the Savior, and I want to keep
+                growing closer to Them through the Book of Mormon.
             </p>
         </section>
 
+        <!-- Keystone Section -->
         <section id="services">
-            <h2>What is Keystone</h2>
+            <h2>What Is the Keystone?</h2>
+
             <p>
-                When we say the Book of Mormon is the keystone of our religion, we mean it is one of the most important foundations of The Church of Jesus Christ of Latter-day Saints.
+                When we say the Book of Mormon is the keystone of our
+                religion, we mean it is one of the most important
+                foundations of The Church of Jesus Christ of
+                Latter-day Saints.
             </p>
-            <br>
-            <p>
-                Joseph Smith taught that the Book of Mormon is the keystone of our religion in three important ways:
-            </p> 
-            <br>
-            <p>1. The keystone of our testimony of Jesus Christ. The Book of Mormon testifies that Jesus Christ is our Savior and Redeemer. It teaches us about His love, His Atonement, and His plan for us.</p>
-            <br>
-            <p>2. The keystone of our doctrine. The Book of Mormon teaches the fullness of the gospel of Jesus Christ and helps us understand Heavenly Father's plan for His children.</p>
-            <br>
-            <p>3. The keystone of our testimony of the Restoration. If the Book of Mormon is true, then Joseph Smith was a prophet of God, and the Church was restored through him. This helps us know that God restored His gospel and priesthood authority to the earth.</p>
-            <br>
-            <p>
-                 Think of it like an arch: A keystone is the central stone that holds an arch together. Without it, the arch would not stand the way it was designed to. In the same way, the Book of Mormon is central to our faith because it helps support our testimony of Jesus Christ and the Restoration of His Church.
-            </p>   
 
+            <p>
+                Joseph Smith taught that the Book of Mormon is the
+                keystone of our religion in three important ways:
+            </p>
+
+            <div class="keystone-point">
+                <h3>1. The Keystone of Our Testimony of Jesus Christ</h3>
+
+                <p>
+                    The Book of Mormon testifies that Jesus Christ is
+                    our Savior and Redeemer. It teaches us about His
+                    love, His Atonement, and His plan for us.
+                </p>
+            </div>
+
+            <div class="keystone-point">
+                <h3>2. The Keystone of Our Doctrine</h3>
+
+                <p>
+                    The Book of Mormon teaches the fullness of the
+                    gospel of Jesus Christ and helps us understand
+                    Heavenly Father's plan for His children.
+                </p>
+            </div>
+
+            <div class="keystone-point">
+                <h3>3. The Keystone of Our Testimony of the Restoration</h3>
+
+                <p>
+                    If the Book of Mormon is true, then Joseph Smith
+                    was a prophet of God, and the Church was restored
+                    through him. This helps us know that God restored
+                    His gospel and priesthood authority to the earth.
+                </p>
+            </div>
+
+            <p>
+                Think of it like an arch: a keystone is the central
+                stone that holds an arch together. Without it, the
+                arch would not stand the way it was designed to.
+                In the same way, the Book of Mormon is central to
+                our faith because it helps support our testimony
+                of Jesus Christ and the Restoration of His Church.
+            </p>
         </section>
 
+        <!-- Testimony Section -->
         <section id="contact">
-            <h2>Testimony</h2>
-            <p>The Book Of Mormon Testifies of Christ</p>
-            <br>
-            <p>The Book of Mormon Was translated by Joseph Smith with the Power of God. </p>
-            <br>
-            <p>The Book of Mormon was based in the Americas. </p>
-            <br>
-            <p> The Book of Mormon was meant for us and our time to come closer to Christ and learn of him</p>
-            <br>
+            <h2>My Testimony</h2>
+
+            <div class="testimony">
+                <p>
+                    I believe the Book of Mormon testifies of Jesus
+                    Christ and helps us come closer to Him.
+                </p>
+
+                <p>
+                    I believe the Book of Mormon was translated by
+                    Joseph Smith through the power of God.
+                </p>
+
+                <p>
+                    I believe the Book of Mormon tells of God's
+                    dealings with people in the ancient Americas.
+                </p>
+
+                <p>
+                    I believe the Book of Mormon was preserved for
+                    us in our day so we can come closer to Christ,
+                    learn of Him, and strengthen our faith.
+                </p>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 My Awesome Website. All rights reserved.</p>
+        <p>&copy; 2026 Foundations of the Restoration</p>
     </footer>
-
-    <script>
-        function showMessage() {
-            document.getElementById("message").textContent =
-                "Welcome! Thanks for visiting my website.";
-        }
-    </script>
 
 </body>
 </html>
